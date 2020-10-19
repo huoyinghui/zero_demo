@@ -1,11 +1,19 @@
 package svc
 
-import "greet/internal/config"
+import (
+	"greet/internal/config"
+
+	"github.com/tal-tech/go-zero/core/stores/sqlx"
+)
 
 type ServiceContext struct {
 	Config config.Config
+	Model  *model.BookModel // 手动代码
 }
 
 func NewServiceContext(c config.Config) *ServiceContext {
-	return &ServiceContext{Config: c}
+	return &ServiceContext{
+		Config: c,
+		Model:  model.NewBookModel(sqlx.NewMysql(c.DataSource), c.Cache, c.Table), // 手动代码
+	}
 }

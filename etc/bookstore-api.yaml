@@ -1,3 +1,7 @@
 Name: bookstore-api
 Host: 0.0.0.0
 Port: 8888
+DataSource: root:@tcp(localhost:3306)/gozero
+Table: book
+Cache:
+  - Host: localhost:6379
