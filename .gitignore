@@ -1,0 +1,13 @@
+.idea
+static/uploadfile
+greet
+temp/
+!temp
+vendor
+config/settings.dev.yml
+go-admin
+middleware/demo.go
+config/settings.dev.b.yml
+temp/logs
+config/settings.dev.yml.log
+config/settings.b.dev.yml
